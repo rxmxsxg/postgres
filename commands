@@ -1,1 +1,26 @@
+# to connect data base from console or terminal
 psql -U your_username -h localhost -p 5432
+
+# list of all databases
+\l or \list
+
+# If you are already connected to a database in psql, run:
+SELECT datname FROM pg_database;
+# This will return just the list of database names.
+
+# After connecting to PostgreSQL (via psql or any SQL client), run:
+CREATE DATABASE mydb;
+CREATE DATABASE mydb OWNER myuser;
+createdb mydb -U your_username
+CREATE DATABASE companydb OWNER ramesh;
+
+# specify encoding and locale:
+CREATE DATABASE mydb
+    WITH OWNER = myuser
+    ENCODING = 'UTF8'
+    LC_COLLATE = 'en_US.UTF-8'
+    LC_CTYPE = 'en_US.UTF-8'
+    TEMPLATE = template0;
+
+# Then you can switch to it:
+\c mydb
