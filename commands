@@ -1,0 +1,1 @@
+psql -U your_username -h localhost -p 5432
