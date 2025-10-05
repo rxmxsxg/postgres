@@ -24,3 +24,4 @@ CREATE DATABASE mydb
 
 # Then you can switch to it:
 \c mydb
+
